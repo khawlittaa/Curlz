@@ -14,6 +14,7 @@
 		6E0A619B25010F2D0041AF71 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E0A619A25010F2D0041AF71 /* Preview Assets.xcassets */; };
 		6E0A619E25010F2D0041AF71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E0A619C25010F2D0041AF71 /* LaunchScreen.storyboard */; };
 		6E0A61A925010F2E0041AF71 /* CurlzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0A61A825010F2E0041AF71 /* CurlzTests.swift */; };
+		6E0A61BE250113530041AF71 /* ColorAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E0A61BD250113530041AF71 /* ColorAssets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		6E0A61A425010F2E0041AF71 /* CurlzTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CurlzTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E0A61A825010F2E0041AF71 /* CurlzTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurlzTests.swift; sourceTree = "<group>"; };
 		6E0A61AA25010F2E0041AF71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E0A61BD250113530041AF71 /* ColorAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ColorAssets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,10 +81,13 @@
 		6E0A619025010F280041AF71 /* Curlz */ = {
 			isa = PBXGroup;
 			children = (
-				6E0A619125010F280041AF71 /* AppDelegate.swift */,
 				6E0A619325010F280041AF71 /* SceneDelegate.swift */,
-				6E0A619525010F280041AF71 /* ContentView.swift */,
+				6E0A619125010F280041AF71 /* AppDelegate.swift */,
+				6E0A61B7250110D50041AF71 /* Extensions */,
+				6E0A61B8250110E30041AF71 /* API */,
+				6E0A61B32501109B0041AF71 /* Home */,
 				6E0A619725010F2D0041AF71 /* Assets.xcassets */,
+				6E0A61BD250113530041AF71 /* ColorAssets.xcassets */,
 				6E0A619C25010F2D0041AF71 /* LaunchScreen.storyboard */,
 				6E0A619F25010F2D0041AF71 /* Info.plist */,
 				6E0A619925010F2D0041AF71 /* Preview Content */,
@@ -105,6 +110,76 @@
 				6E0A61AA25010F2E0041AF71 /* Info.plist */,
 			);
 			path = CurlzTests;
+			sourceTree = "<group>";
+		};
+		6E0A61B32501109B0041AF71 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				6E0A61BC250112DB0041AF71 /* Controllers */,
+				6E0A61B6250110C30041AF71 /* Models */,
+				6E0A61B5250110B00041AF71 /* ViewModels */,
+				6E0A61B4250110A60041AF71 /* Views */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		6E0A61B4250110A60041AF71 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6E0A619525010F280041AF71 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6E0A61B5250110B00041AF71 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		6E0A61B6250110C30041AF71 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6E0A61B7250110D50041AF71 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6E0A61B8250110E30041AF71 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				6E0A61BA2501115C0041AF71 /* Services */,
+				6E0A61B9250111520041AF71 /* Models */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		6E0A61B9250111520041AF71 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6E0A61BA2501115C0041AF71 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		6E0A61BC250112DB0041AF71 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +265,7 @@
 			files = (
 				6E0A619E25010F2D0041AF71 /* LaunchScreen.storyboard in Resources */,
 				6E0A619B25010F2D0041AF71 /* Preview Assets.xcassets in Resources */,
+				6E0A61BE250113530041AF71 /* ColorAssets.xcassets in Resources */,
 				6E0A619825010F2D0041AF71 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
