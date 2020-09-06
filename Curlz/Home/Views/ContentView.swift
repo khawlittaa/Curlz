@@ -10,7 +10,9 @@ import SwiftUI
 
 struct ContentView: View {
     @State var showMenu = false
+    
     var body: some View {
+        
         let dragGesture = DragGesture()
             .onEnded {
                 if $0.translation.width < -100 {
@@ -19,8 +21,6 @@ struct ContentView: View {
                     }
                 }
         }
-        
-            
         
         /// using geometry reader(to know width and heigt of screen) to make MainView fill th whole screen
         return NavigationView {
@@ -40,14 +40,13 @@ struct ContentView: View {
                 }
            .gesture(dragGesture)
             }
-//            .navigationBarTitle(" home with mEnu",displayMode: .inline)
             .navigationBarItems(leading: (
                 Button(action: {
                     withAnimation {
                         self.showMenu.toggle()
                     }
                 }){
-                    Image(systemName: "line.horizontal.3").foregroundColor(.pink)
+                    Image(systemName: "line.horizontal.3").foregroundColor(.white)
                         .imageScale(.large)
                     
                 }
@@ -61,14 +60,31 @@ struct MainView: View {
     @Binding var showMenu: Bool
     
     var body: some View {
-        Button(action: {
-            withAnimation{
-                self.showMenu = true
-            }
-        })
-        {
-            Text("show sidde Menu")
+        VStack {
+            Wave(yOffset: 0.3)
+                .fill(Color.purple)
+                .frame(height: 200)
+                .shadow(radius: 6)
+                .overlay(HStack {
+                                Text("Let your Curlz be Happy")
+                                    .font(.title)
+                                    .fontWeight(.semibold)
+                                    .foregroundColor(Color.white)
+                                    .multilineTextAlignment(.leading)
+                                    .padding(.trailing)
+                                    .padding(.top)
+                                    
+                                Image("gingerCurlyHair")
+                                .resizable()
+                            }
+                        .frame(height: 180)
+                        .padding()
+                )
+                
+            Spacer()
         }
+
+        .edgesIgnoringSafeArea(.top)
     }
 }
 
