@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State var showMenu = false
+    @State var searchText = ""
     
     var body: some View {
         
@@ -25,7 +26,7 @@ struct ContentView: View {
         return NavigationView {
             GeometryReader{ geometry in
                 ZStack(alignment: .leading) {
-                    MainView(showMenu: self.$showMenu)
+                    MainView(showMenu: self.$showMenu, searchText: self.$searchText)
                         .frame(width: geometry.size.width, height: geometry.size.height)
                         .offset(x: self.showMenu ? geometry.size.width/2 : 0)
                         .disabled(self.showMenu ? true : false)
@@ -56,6 +57,7 @@ struct ContentView: View {
 
 struct MainView: View {
     @Binding var showMenu: Bool
+    @Binding var searchText: String
     
     var body: some View {
         VStack {
@@ -79,7 +81,11 @@ struct MainView: View {
                 .padding()
             )
             
+            SearchBar(text: $searchText)
+            .padding(.top, 20)
+            
             Spacer()
+            
         }
             
         .edgesIgnoringSafeArea(.top)
