@@ -21,11 +21,9 @@ struct ContentView: View {
                     }
                 }
         }
-        
         /// using geometry reader(to know width and heigt of screen) to make MainView fill th whole screen
         return NavigationView {
             GeometryReader{ geometry in
-    ///          Zstack stacks View on top of each other
                 ZStack(alignment: .leading) {
                     MainView(showMenu: self.$showMenu)
                         .frame(width: geometry.size.width, height: geometry.size.height)
@@ -38,7 +36,7 @@ struct ContentView: View {
                             .transition(.move(edge: .leading))
                     }
                 }
-           .gesture(dragGesture)
+                .gesture(dragGesture)
             }
             .navigationBarItems(leading: (
                 Button(action: {
@@ -66,24 +64,24 @@ struct MainView: View {
                 .frame(height: 200)
                 .shadow(radius: 6)
                 .overlay(HStack {
-                                Text("Let your Curlz be Happy")
-                                    .font(.title)
-                                    .fontWeight(.semibold)
-                                    .foregroundColor(Color.white)
-                                    .multilineTextAlignment(.leading)
-                                    .padding(.trailing)
-                                    .padding(.top)
-                                    
-                                Image("gingerCurlyHair")
-                                .resizable()
-                            }
-                        .frame(height: 180)
-                        .padding()
-                )
-                
+                    Text("Let your Curlz be Happy")
+                        .font(.title)
+                        .fontWeight(.semibold)
+                        .foregroundColor(Color.white)
+                        .multilineTextAlignment(.leading)
+                        .padding(.trailing)
+                        .padding(.top)
+                    
+                    Image("gingerCurlyHair")
+                        .resizable()
+                }
+                .frame(height: 180)
+                .padding()
+            )
+            
             Spacer()
         }
-
+            
         .edgesIgnoringSafeArea(.top)
     }
 }

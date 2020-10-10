@@ -13,31 +13,31 @@ struct MenuView: View {
         VStack(alignment: .leading){
             
             HStack{
-                Image(systemName: "person").foregroundColor(.pink).imageScale(.large)
-                Text("Profile").foregroundColor(.pink)
+                Image(systemName: "person").foregroundColor(.white).imageScale(.large)
+                Text("Profile").foregroundColor(.white)
                     .font(.headline)
             }
             .padding(.top, 100)
             
             HStack{
-                Image(systemName: "envelope").foregroundColor(.pink).imageScale(.large)
-                Text("Messages").foregroundColor(.pink)
+                Image(systemName: "magnifyingglass").foregroundColor(.white).imageScale(.large)
+                Text("Search").foregroundColor(.white)
                     .font(.headline)
             }
             .padding(.top,30)
             
             HStack{
-                Image(systemName: "gear").foregroundColor(.pink).imageScale(.large)
-                Text("Settings").foregroundColor(.pink)
+                Image(systemName: "gear").foregroundColor(.white).imageScale(.large)
+                Text("Settings").foregroundColor(.white)
                     .font(.headline)
             }
             .padding(.top, 30)
             
             Spacer()
         }
-    .padding()
+        .padding()
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(Color(UIColor.lightGray))
+        .background(Color.purple)
         .edgesIgnoringSafeArea(.all)
     }
 }

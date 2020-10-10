@@ -26,7 +26,7 @@ struct Wave: Shape {
         return path
     }
     
-  
+    
 }
 
 struct WaveShape_Previews: PreviewProvider {
@@ -34,6 +34,6 @@ struct WaveShape_Previews: PreviewProvider {
         Wave(yOffset: 0.4)
             .stroke(Color.purple, lineWidth: 2)
             .frame(height: 200)
-        .padding()
+            .padding()
     }
 }
