@@ -82,7 +82,34 @@ struct MainView: View {
             )
             
             SearchBar(text: $searchText)
-            .padding(.top, 20)
+                .padding(.top, 20)
+            
+            VStack(alignment: .leading) {
+                Text("Category")
+                    .padding(.leading,20)
+                    .padding(.trailing)
+                ScrollView(.vertical, showsIndicators: false, content: {
+                    ForEach(0..<CategoryCell.row) { categoryRow in
+                        HStack{
+                            ForEach(0..<CategoryCell.column) { category in
+                                CategoryCell()
+                                
+                            }
+                        }
+                    }
+                    HStack{
+                        Spacer()
+                    Text("see all categories")
+                        .foregroundColor(.gray)
+                        .padding(.top,6)
+                        .padding(.trailing,20)
+                        .padding(.leading)
+                        
+                    }
+                })
+
+               
+            }.padding(.top, 20)
             
             Spacer()
             

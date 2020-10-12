@@ -18,6 +18,7 @@
 		6E3421B325046E28009AE179 /* WaveShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3421B225046E28009AE179 /* WaveShape.swift */; };
 		6E840FDB2503D26900CD334C /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E840FDA2503D26900CD334C /* MenuView.swift */; };
 		6EAF1DBF2532183300C2AD4D /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAF1DBE2532183300C2AD4D /* SearchBar.swift */; };
+		6ED008022534AD75001315B4 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED008012534AD75001315B4 /* CategoryCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		6E3421B225046E28009AE179 /* WaveShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveShape.swift; sourceTree = "<group>"; };
 		6E840FDA2503D26900CD334C /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		6EAF1DBE2532183300C2AD4D /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		6ED008012534AD75001315B4 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 				6E840FDA2503D26900CD334C /* MenuView.swift */,
 				6E3421B225046E28009AE179 /* WaveShape.swift */,
 				6EAF1DBE2532183300C2AD4D /* SearchBar.swift */,
+				6ED008012534AD75001315B4 /* CategoryCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				6E0A619225010F280041AF71 /* AppDelegate.swift in Sources */,
 				6E3421B325046E28009AE179 /* WaveShape.swift in Sources */,
 				6E840FDB2503D26900CD334C /* MenuView.swift in Sources */,
+				6ED008022534AD75001315B4 /* CategoryCell.swift in Sources */,
 				6E0A619425010F280041AF71 /* SceneDelegate.swift in Sources */,
 				6E0A619625010F280041AF71 /* ContentView.swift in Sources */,
 				6EAF1DBF2532183300C2AD4D /* SearchBar.swift in Sources */,
