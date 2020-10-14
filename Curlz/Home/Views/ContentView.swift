@@ -88,30 +88,38 @@ struct MainView: View {
                 Text("Category")
                     .padding(.leading,20)
                     .padding(.trailing)
-                ScrollView(.vertical, showsIndicators: false, content: {
                     ForEach(0..<CategoryCell.row) { categoryRow in
                         HStack{
                             ForEach(0..<CategoryCell.column) { category in
                                 CategoryCell()
                                 
                             }
-                        }
+                        }.padding(.leading,20)
                     }
+                
                     HStack{
                         Spacer()
                     Text("see all categories")
-                        .foregroundColor(.gray)
                         .padding(.top,6)
                         .padding(.trailing,20)
                         .padding(.leading)
                         
                     }
-                })
+                
+                Text("Best Products")
+                    .padding(.leading,20)
+                    .padding(.trailing)
+                
+                ScrollView(.horizontal, showsIndicators: false, content: {
+                      HStack{
+                    ForEach(0..<5){ product  in
+                        ProductCell()
+                        }}
+                }).padding(.leading,20)
 
                
             }.padding(.top, 20)
             
-            Spacer()
             
         }
             
