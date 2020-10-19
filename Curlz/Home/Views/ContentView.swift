@@ -58,6 +58,7 @@ struct ContentView: View {
 struct MainView: View {
     @Binding var showMenu: Bool
     @Binding var searchText: String
+    let homeVM = HomeViewModel()
     
     var body: some View {
         VStack {
@@ -67,7 +68,7 @@ struct MainView: View {
                 .shadow(radius: 6)
                 .overlay(HStack(alignment: .center, spacing: 10) {
                     Text("Let your Curlz be Happy")
-                        .font(.headline)
+                    .font(.system(size: 24.0))
                         .fontWeight(.semibold)
                         .foregroundColor(Color.white)
                         .multilineTextAlignment(.leading)
@@ -87,39 +88,46 @@ struct MainView: View {
             
             VStack(alignment: .leading) {
                 Text("Category")
+                    .foregroundColor(.mainText)
+                    .font(.system(size: 20.0))
                     .padding(.leading,20)
                     .padding(.trailing)
-                    ForEach(0..<CategoryCell.row) { categoryRow in
-                        HStack{
-                            ForEach(0..<CategoryCell.column) { category in
-                                CategoryCell()
-                                
-                            }
-                        }.padding(.leading,20)
-                    }
-                
+                ForEach(0..<CategoryCell.row) { categoryRow in
                     HStack{
-                        Spacer()
-                    Text("see all categories")
+                        ForEach(0..<CategoryCell.column) { category in
+                            CategoryCell(category: self.homeVM.categories[category+categoryRow+categoryRow])
+                            
+                        }
+                    }.padding(.leading,20)
+                }
+                
+                
+                
+                HStack{
+                    Spacer()
+                    Text("see all categories").foregroundColor(.mainText)
+                    .font(.system(size: 12.0))
                         .padding(.top,6)
                         .padding(.trailing,20)
                         .padding(.leading)
-                        
-                    }
+                    
+                }
                 
                 Text("Best Products")
+                    .foregroundColor(.mainText)
+                    .font(.system(size: 20.0))
                     .padding(.leading,20)
                     .padding(.top,30)
                     .padding(.trailing)
                 
                 ScrollView(.horizontal, showsIndicators: false, content: {
-                      HStack{
-                    ForEach(0..<5){ product  in
-                        ProductCell()
+                    HStack{
+                        ForEach(0..<5){ product  in
+                            ProductCell()
                         }}
                 }).padding(.leading,20)
-
-               
+                
+                
             }.padding(.top, 20)
             
             
