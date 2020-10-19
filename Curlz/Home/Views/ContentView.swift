@@ -65,17 +65,17 @@ struct MainView: View {
                 .fill(Color.purple)
                 .frame(height: 250)
                 .shadow(radius: 6)
-                .overlay(HStack {
+                .overlay(HStack(alignment: .center, spacing: 10) {
                     Text("Let your Curlz be Happy")
-                        .font(.title)
+                        .font(.headline)
                         .fontWeight(.semibold)
                         .foregroundColor(Color.white)
                         .multilineTextAlignment(.leading)
-                        .padding(.trailing)
-                        .padding(.all,20)
+                        .padding(.top,100)
                     
                     Image("gingerCurlyHair")
                         .resizable()
+                        .padding(.top, 60)
                 }
                 .frame(height: 200)
                 .padding(.all,20)

@@ -37,7 +37,7 @@ struct ProductCell: View {
                     
                     }
 
-                    HStack(alignment: .center,spacing: 4){
+                    HStack(alignment: .center, spacing: 4){
                             Image("star-filled").resizable()
                                 .frame(width: 15, height: 15)
                                 .padding(.leading)
