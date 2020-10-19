@@ -44,10 +44,12 @@ struct ProductCell: View {
                                 .frame(width: 15, height: 15)
                                 .padding(.leading)
                                 
-                            Text("4.5").foregroundColor(.black)
+                            Text("4.5")
+                            .foregroundColor(.mainText)
+                            .font(.system(size: 12.0))
                         }
                     .frame(height: 15)
-                .position(CGPoint(x: 120, y: 20))
+                .position(CGPoint(x: 115, y: 20))
                 })
               
     
