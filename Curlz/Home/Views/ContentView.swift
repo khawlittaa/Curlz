@@ -63,7 +63,7 @@ struct MainView: View {
         VStack {
             Wave(yOffset: 0.3)
                 .fill(Color.purple)
-                .frame(height: 200)
+                .frame(height: 250)
                 .shadow(radius: 6)
                 .overlay(HStack {
                     Text("Let your Curlz be Happy")
@@ -72,13 +72,14 @@ struct MainView: View {
                         .foregroundColor(Color.white)
                         .multilineTextAlignment(.leading)
                         .padding(.trailing)
-                        .padding(.top)
+                        .padding(.all,20)
                     
                     Image("gingerCurlyHair")
                         .resizable()
                 }
-                .frame(height: 180)
-                .padding()
+                .frame(height: 200)
+                .padding(.all,20)
+                .edgesIgnoringSafeArea(.top)
             )
             
             SearchBar(text: $searchText)
@@ -108,6 +109,7 @@ struct MainView: View {
                 
                 Text("Best Products")
                     .padding(.leading,20)
+                    .padding(.top,30)
                     .padding(.trailing)
                 
                 ScrollView(.horizontal, showsIndicators: false, content: {
