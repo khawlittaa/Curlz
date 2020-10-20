@@ -21,9 +21,10 @@ struct ProductCell: View {
                 .overlay(   ZStack(){ VStack{
                     Image("gingerCurlyHair")
                         .resizable()
+                        .renderingMode(.original)
                     Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-                    .foregroundColor(.mainText)
-                    .font(.system(size: 16.0))
+                        .foregroundColor(.mainText)
+                        .font(.system(size: 16.0))
                     
                     
                     Button(action: {
@@ -38,22 +39,23 @@ struct ProductCell: View {
                     
                     
                     }
-
+                    
                     HStack(alignment: .center, spacing: 4){
-                            Image("star-filled").resizable()
-                                .frame(width: 15, height: 15)
-                                .padding(.leading)
-                                
-                            Text("4.5")
+                        Image("star-filled").resizable()
+                            .renderingMode(.original)
+                            .frame(width: 15, height: 15)
+                            .padding(.leading)
+                        
+                        Text("4.5")
                             .foregroundColor(.mainText)
                             .font(.system(size: 12.0))
-                        }
+                    }
                     .frame(height: 15)
-                .position(CGPoint(x: 115, y: 20))
+                    .position(CGPoint(x: 115, y: 20))
                 })
-              
-    
-        
+            
+            
+            
             
             
             

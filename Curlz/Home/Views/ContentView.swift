@@ -123,17 +123,17 @@ struct MainView: View {
                 ScrollView(.horizontal, showsIndicators: false, content: {
                     HStack{
                         ForEach(0..<5){ product  in
-                            ProductCell()
+                            NavigationLink(destination: ProductDetailsView() ){
+                                ProductCell()
+                            }
                         }}
                 }).padding(.leading,20)
                 
                 
             }.padding(.top, 20)
-            
-            
         }
-            
         .edgesIgnoringSafeArea(.top)
+            
     }
 }
 

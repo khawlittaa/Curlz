@@ -17,13 +17,16 @@ struct CategoryCell: View {
     var body: some View {
         ZStack(alignment: .leading) {
             RoundedRectangle(cornerRadius: 10).frame(width: width, height: 50)
-            .foregroundColor(category.categoryBackgroudColor)
+                .foregroundColor(category.categoryBackgroudColor)
                 .overlay(HStack{
-                    Image(systemName: "person").foregroundColor(.white).imageScale(.large)
+                    Image(systemName: "person")
+                        .foregroundColor(.white)
+                        .imageScale(.large)
                         .padding(.trailing)
                     
-                    Text(category.categoryName).foregroundColor(.white)
-                    .font(.system(size: 16.0))
+                    Text(category.categoryName)
+                        .foregroundColor(.white)
+                        .font(.system(size: 16.0))
                 })
             
         }
