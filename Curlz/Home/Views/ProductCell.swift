@@ -14,17 +14,20 @@ struct ProductCell: View {
         
         ZStack(alignment: .trailing) {
             
-            RoundedRectangle(cornerRadius: 10).frame(width: 150, height: 150).foregroundColor(.white)
+            RoundedRectangle(cornerRadius: 10).frame(width: 150, height: 160).foregroundColor(.white)
                 .opacity(0.7)
                 .shadow(color: .gray, radius: 1, x: 1, y: 1)
                 
                 .overlay(   ZStack(){ VStack{
-                    Image("gingerCurlyHair")
+                    Image("natureBoxShampoo")
                         .resizable()
                         .renderingMode(.original)
-                    Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+                    .frame(width: 90, height: 60)
+                    
+                    Text("Nature Box Shampoo")
                         .foregroundColor(.mainText)
-                        .font(.system(size: 16.0))
+                        .font(.system(size: 14.0))
+                        .multilineTextAlignment(.center)
                     
                     
                     Button(action: {
@@ -32,10 +35,13 @@ struct ProductCell: View {
                     }) {
                         Text("Hair Product")
                             .frame(width: 150 , height: 30, alignment: .center)
+                            
                     }
                     .background(Color.blue)
                     .foregroundColor(Color.white)
                     .cornerRadius(10)
+                    .padding(.all, 10)
+                
                     
                     
                     }

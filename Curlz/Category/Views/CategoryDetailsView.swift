@@ -11,8 +11,24 @@ import SwiftUI
 struct CategoryDetailsView: View {
     
     let category: Category
+    
     var body: some View {
-        Text(category.categoryName)
+        
+        VStack {
+            Wave(yOffset: 0.3)
+                .fill(Color.mainOrange)
+                .frame(height: 250)
+                .shadow(radius: 6)
+                .overlay(
+                    Text(category.categoryName)
+                        .font(.system(size: 24.0))
+                        .foregroundColor(Color.white)
+                    
+                )
+            
+            Spacer()
+        }
+        .edgesIgnoringSafeArea(.top)
     }
 }
 

@@ -63,7 +63,7 @@ struct MainView: View {
     var body: some View {
         VStack {
             Wave(yOffset: 0.3)
-                .fill(Color.purple)
+                .fill(Color.mainPink)
                 .frame(height: 250)
                 .shadow(radius: 6)
                 .overlay(HStack(alignment: .center, spacing: 10) {

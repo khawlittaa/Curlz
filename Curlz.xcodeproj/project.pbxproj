@@ -209,7 +209,6 @@
 			children = (
 				6E2D52AA253EF8320003BB2D /* ViewModels */,
 				6E2D52A7253EF8050003BB2D /* Views */,
-				6E2D52A8253EF8220003BB2D /* CategoryDetailsView.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -226,6 +225,7 @@
 		6E2D52A7253EF8050003BB2D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6E2D52A8253EF8220003BB2D /* CategoryDetailsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";

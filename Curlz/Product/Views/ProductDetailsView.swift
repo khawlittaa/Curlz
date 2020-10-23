@@ -10,13 +10,13 @@ import SwiftUI
 
 struct ProductDetailsView: View {
     
-//    @Binding var showMenu: Bool
+    //    @Binding var showMenu: Bool
     
     var body: some View {
         
         VStack {
             Wave(yOffset: 0.3)
-                .fill(Color.mainOrange)
+                .fill(Color.mainPurple)
                 .frame(height: 250)
                 .shadow(radius: 6)
                 .overlay(
@@ -55,12 +55,12 @@ struct ProductDetailsView: View {
                                 .multilineTextAlignment(.leading)
                             
                         }
-                        .position(x: 80, y: 240)
+                        .position(x: 80, y: 120)
                         
-                        Image("gingerCurlyHair")
+                        Image("natureBoxShampoo")
                             .resizable()
                             .padding(.top, 10)
-                            .position(x: 80, y: 200)
+                            .position(x: 100, y: 100)
                         
                     }
                     .frame(height: 200)
@@ -74,55 +74,9 @@ struct ProductDetailsView: View {
     }
 }
 
-struct ProductView: View {
-    @State var showMenu = false
-    
-    var body: some View {
-        
-        let dragGesture = DragGesture()
-            .onEnded {
-                if $0.translation.width < -100 {
-                    withAnimation {
-                        self.showMenu = false
-                    }
-                }
-        }
-        /// using geometry reader(to know width and heigt of screen) to make MainView fill th whole screen
-        return NavigationView {
-            GeometryReader{ geometry in
-                ZStack(alignment: .leading) {
-                    ProductDetailsView()
-                        .frame(width: geometry.size.width, height: geometry.size.height)
-                        .offset(x: self.showMenu ? geometry.size.width/2 : 0)
-                        .disabled(self.showMenu ? true : false)
-                    
-                    if self.showMenu{
-                        MenuView()
-                            .frame(width: geometry.size.width/2)
-                            .transition(.move(edge: .leading))
-                    }
-                }
-                .gesture(dragGesture)
-            }
-            .navigationBarItems(leading: (
-                Button(action: {
-                    withAnimation {
-                        self.showMenu.toggle()
-                    }
-                }){
-                    Image(systemName: "line.horizontal.3").foregroundColor(.white)
-                        .imageScale(.large)
-                    
-                }
-            ))
-        }
-        
-    }
-}
-
 struct ProductDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        ProductView()
+        ProductDetailsView()
         
     }
 }
