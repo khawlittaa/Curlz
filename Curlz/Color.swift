@@ -14,5 +14,9 @@ extension Color{
     public static let mainPurple = Color("MainPurple")
     
     public static let mainText = Color("MainText")
+    public static let disabledText = Color("DisabledText")
+    
+    public static let gradientPurple = Color("GradientPurple")
+    public static let gradientOrange = Color("GradientOrange")
     
 }

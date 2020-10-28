@@ -59,11 +59,11 @@ struct MainView: View {
     @Binding var showMenu: Bool
     @Binding var searchText: String
     let homeVM = HomeViewModel()
-    
+    let linearGradient = LinearGradient(gradient: Gradient(colors: [.gradientPurple, .mainPink]), startPoint: UnitPoint(x: 0.9, y: 0.9), endPoint: UnitPoint(x: 0.25, y: 0.25))
     var body: some View {
         VStack {
             Wave(yOffset: 0.3)
-                .fill(Color.mainPink)
+                .fill(linearGradient)
                 .frame(height: 250)
                 .shadow(radius: 6)
                 .overlay(HStack(alignment: .center, spacing: 10) {
@@ -117,7 +117,7 @@ struct MainView: View {
                     .foregroundColor(.mainText)
                     .font(.system(size: 20.0))
                     .padding(.leading,20)
-                    .padding(.top,30)
+                    .padding(.top,20)
                     .padding(.trailing)
                 
                 ScrollView(.horizontal, showsIndicators: false, content: {
@@ -139,6 +139,9 @@ struct MainView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Group {
+            ContentView()
+            ContentView()
+        }
     }
 }
