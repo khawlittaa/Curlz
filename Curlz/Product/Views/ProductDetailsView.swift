@@ -12,9 +12,13 @@ struct ProductDetailsView: View {
     
     //    @Binding var showMenu: Bool
     
+    @State  var  productVM = ProductViewModel()
+    
+    @State var colors: [Color] = [.pink, .red, .orange, .yellow, .green, .blue, .purple, .gray, .black]
+    
+    
     var body: some View {
-        
-        VStack {
+        VStack(alignment: .leading) {
             Wave(yOffset: 0.3)
                 .fill(Color.mainPurple)
                 .frame(height: 250)
@@ -44,6 +48,17 @@ struct ProductDetailsView: View {
                                 Text("4.5")
                                     .foregroundColor(.white)
                                     .font(.system(size: 12.0))
+                                
+                                
+                                Button(action: {
+                                    //do action
+                                }) {
+                                    Text("100k reviews")
+                                        .font(.system(size: 12.0))
+                                        
+                                }
+                                .foregroundColor(Color.white)
+                                .cornerRadius(10)
                             }
                             .frame(height: 15)
                             
@@ -66,9 +81,59 @@ struct ProductDetailsView: View {
                     .frame(height: 200)
                     .padding(.all,20)
                     .edgesIgnoringSafeArea(.top)
-            )
+                )
             
-            Spacer()
+            HStack{
+                Spacer()
+                Button(action: {
+                    //do action
+                }) {
+                    Text("add review")
+                        .font(.system(size: 12.0))
+                        .frame(width: 100 , height: 30, alignment: .center)
+                        
+                }
+                .foregroundColor(Color.mainPurple)
+                .frame(height: 40)
+                .cornerRadius(10)
+                .padding(.all, 10)
+                
+            }
+            
+           
+            
+            Collection(data: $productVM.product.productOptions) { option in
+                // add cell content here
+                VStack {
+                    Image(option).resizable()
+                        .frame(minWidth: 40, maxWidth: .infinity)
+                }
+                .frame(height: 60)
+            }
+            .padding(.all,20)
+            .frame(height: 180)
+            
+            Text("Ingredients List: ")
+                .font(.system(size: 20.0))
+                .fontWeight(.semibold)
+                .multilineTextAlignment(.leading)
+                .padding(.trailing)
+                .padding(.leading,20)
+                .foregroundColor(.mainText)
+            
+            
+            Collection(data: $productVM.product.productOptions, cols: 3, spacing: 10)  { option in
+                // add cell content here
+                VStack {
+                   IngredientCell()
+                }
+                .frame( height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                
+            }
+            .cornerRadius(10)
+            
+            
+             Spacer()
         }
         .edgesIgnoringSafeArea(.top)
     }
