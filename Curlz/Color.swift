@@ -8,15 +8,32 @@
 
 import SwiftUI
 extension Color{
-    public static let mainBlue = Color("MainBlue")
-    public static let mainOrange = Color("MainOrange")
-    public static let mainPink = Color("MainPink")
-    public static let mainPurple = Color("MainPurple")
+    // Primary Colors
+    public static let softBlue = Color("softBlue")
+    public static let orangeish = Color("orangeish")
+    public static let rosyPink = Color("rosyPink")
+    public static let blueberry = Color("blueberry")
+    public static let tealish = Color("tealish")
     
-    public static let mainText = Color("MainText")
+    // Text Colors
+    public static let dusk = Color("dusk")
     public static let disabledText = Color("DisabledText")
+    public static let midnightBlue71 = Color("midnightBlue71")
+    public static let eggplant = Color("eggplant")
+    public static let brownGreyTwo = Color("brownGreyTwo")
+    public static let brownGreyThree = Color("brownGreyThree")
+    public static let brownGrey = Color("brownGrey")
+    public static let veryLightPink = Color("veryLightPink")
     
-    public static let gradientPurple = Color("GradientPurple")
-    public static let gradientOrange = Color("GradientOrange")
+    // Secondary Colors
+    public static let goldenRod = Color("goldenRod")
+    public static let mediumGreen = Color("mediumGreen")
+    public static let rose = Color("rose")
+    
+    // Accent Colors
+    public static let softBlueTwo = Color("softBlueTwo")
+    public static let sapphire = Color("sapphire")
+    public static let blueberryTwo = Color("blueberryTwo")
+    public static let sapphireTwo = Color("sapphireTwo")
     
 }

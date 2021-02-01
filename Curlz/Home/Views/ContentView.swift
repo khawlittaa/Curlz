@@ -59,7 +59,7 @@ struct MainView: View {
     @Binding var showMenu: Bool
     @Binding var searchText: String
     let homeVM = HomeViewModel()
-    let linearGradient = LinearGradient(gradient: Gradient(colors: [.gradientPurple, .mainPink]), startPoint: UnitPoint(x: 0.9, y: 0.9), endPoint: UnitPoint(x: 0.25, y: 0.25))
+    let linearGradient = LinearGradient(gradient: Gradient(colors: [.blueberry, .rosyPink]), startPoint: UnitPoint(x: 0.9, y: 0.9), endPoint: UnitPoint(x: 0.25, y: 0.25))
     var body: some View {
         VStack {
             Wave(yOffset: 0.3)
@@ -88,7 +88,7 @@ struct MainView: View {
             
             VStack(alignment: .leading) {
                 Text("Category")
-                    .foregroundColor(.mainText)
+                    .foregroundColor(Color.midnightBlue71)
                     .font(.system(size: 20.0))
                     .padding(.leading,20)
                     .padding(.trailing)
@@ -105,7 +105,7 @@ struct MainView: View {
                 
                 HStack{
                     Spacer()
-                    Text("see all categories").foregroundColor(.mainText)
+                    Text("see all categories").foregroundColor(.dusk)
                     .font(.system(size: 12.0))
                         .padding(.top,6)
                         .padding(.trailing,20)
@@ -114,7 +114,7 @@ struct MainView: View {
                 }
                 
                 Text("Best Products")
-                    .foregroundColor(.mainText)
+                    .foregroundColor(.dusk)
                     .font(.system(size: 20.0))
                     .padding(.leading,20)
                     .padding(.top,20)

@@ -25,7 +25,7 @@ struct ProductCell: View {
                     .frame(width: 90, height: 60)
                     
                     Text("Nature Box Shampoo")
-                        .foregroundColor(.mainText)
+                        .foregroundColor(.dusk)
                         .font(.system(size: 14.0))
                         .multilineTextAlignment(.center)
                     
@@ -53,7 +53,7 @@ struct ProductCell: View {
                             .padding(.leading)
                         
                         Text("4.5")
-                            .foregroundColor(.mainText)
+                            .foregroundColor(.dusk)
                             .font(.system(size: 12.0))
                     }
                     .frame(height: 15)

@@ -16,13 +16,12 @@ struct CategoryDetailsView: View {
         
         VStack {
             Wave(yOffset: 0.3)
-                .fill(Color.mainOrange)
+                .fill(Color.orangeish)
                 .frame(height: 250)
                 .shadow(radius: 6)
                 .overlay(
                     Text(category.categoryName)
-                        .font(.system(size: 24.0))
-                        .foregroundColor(Color.white)
+                        .HeaderStyle()
                     
                 )
             
@@ -34,6 +33,6 @@ struct CategoryDetailsView: View {
 
 struct CategoryDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        CategoryDetailsView(category: Category(categoryName: "Category", categoryImage: "", categoryBackgroudColor: .mainBlue))
+        CategoryDetailsView(category: Category(categoryName: "Category", categoryImage: "", categoryBackgroudColor: .softBlue))
     }
 }

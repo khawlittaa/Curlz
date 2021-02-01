@@ -35,6 +35,6 @@ struct CategoryCell: View {
 
 struct CategoryCell_Previews: PreviewProvider {
     static var previews: some View {
-        CategoryCell(category: Category(categoryName: "Wash Day Tips", categoryImage: "", categoryBackgroudColor: .mainPink))
+        CategoryCell(category: Category(categoryName: "Wash Day Tips", categoryImage: "", categoryBackgroudColor: .rosyPink))
     }
 }

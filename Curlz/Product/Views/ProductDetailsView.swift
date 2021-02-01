@@ -20,7 +20,7 @@ struct ProductDetailsView: View {
     var body: some View {
         VStack(alignment: .leading) {
             Wave(yOffset: 0.3)
-                .fill(Color.mainPurple)
+                .fill(Color.blueberry)
                 .frame(height: 250)
                 .shadow(radius: 6)
                 .overlay(
@@ -93,7 +93,7 @@ struct ProductDetailsView: View {
                         .frame(width: 100 , height: 30, alignment: .center)
                         
                 }
-                .foregroundColor(Color.mainPurple)
+                .foregroundColor(Color.blueberry)
                 .frame(height: 40)
                 .cornerRadius(10)
                 .padding(.all, 10)
@@ -119,7 +119,7 @@ struct ProductDetailsView: View {
                 .multilineTextAlignment(.leading)
                 .padding(.trailing)
                 .padding(.leading,20)
-                .foregroundColor(.mainText)
+                .foregroundColor(.dusk)
             
             
             Collection(data: $productVM.product.productOptions, cols: 3, spacing: 10)  { option in
