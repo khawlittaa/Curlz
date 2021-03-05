@@ -14,7 +14,7 @@ struct IngredientCell: View {
         let width = (UIScreen.main.bounds.width / 3) - 20
         ZStack(alignment: .leading) {
             
-            RoundedRectangle(cornerRadius: 10).frame(width: width)
+            RoundedRectangle(cornerRadius: 10).frame(width: width, height: 40)
             .foregroundColor(.pink)
             .overlay(
                 Text("Sodium Loreth sulfate")

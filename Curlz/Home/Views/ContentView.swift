@@ -21,7 +21,7 @@ struct ContentView: View {
                         self.showMenu = false
                     }
                 }
-        }
+            }
         /// using geometry reader(to know width and heigt of screen) to make MainView fill th whole screen
         return NavigationView {
             GeometryReader{ geometry in
@@ -33,7 +33,7 @@ struct ContentView: View {
                     
                     if self.showMenu{
                         MenuView()
-                            .frame(width: geometry.size.width/2)
+                            .frame(width: geometry.size.width/2 + 50 )
                             .transition(.move(edge: .leading))
                     }
                 }
@@ -68,7 +68,7 @@ struct MainView: View {
                 .shadow(radius: 6)
                 .overlay(HStack(alignment: .center, spacing: 10) {
                     Text("Let your Curlz be Happy")
-                    .font(.system(size: 24.0))
+                        .font(.system(size: 24.0))
                         .fontWeight(.semibold)
                         .foregroundColor(Color.white)
                         .multilineTextAlignment(.leading)
@@ -81,66 +81,70 @@ struct MainView: View {
                 .frame(height: 200)
                 .padding(.all,20)
                 .edgesIgnoringSafeArea(.top)
-            )
+                )
             
-            SearchBar(text: $searchText)
-                .padding(.top, 20)
-            
-            VStack(alignment: .leading) {
-                Text("Category")
-                    .foregroundColor(Color.midnightBlue71)
-                    .font(.system(size: 20.0))
-                    .padding(.leading,20)
-                    .padding(.trailing)
-                ForEach(0..<CategoryCell.row) { categoryRow in
-                    HStack{
-                        ForEach(0..<CategoryCell.column) { category in
-                            CategoryCell(category: self.homeVM.categories[category+categoryRow+categoryRow])
-                            
-                        }
-                    }.padding(.leading,20)
-                }
+            ScrollView(.vertical, showsIndicators: false, content: {
                 
+                SearchBar(text: $searchText)
+                    .padding(.top, 20)
                 
-                
-                HStack{
-                    Spacer()
-                    Text("see all categories").foregroundColor(.dusk)
-                    .font(.system(size: 12.0))
-                        .padding(.top,6)
-                        .padding(.trailing,20)
-                        .padding(.leading)
-                    
-                }
-                
-                Text("Best Products")
-                    .foregroundColor(.dusk)
-                    .font(.system(size: 20.0))
-                    .padding(.leading,20)
-                    .padding(.top,20)
-                    .padding(.trailing)
-                
-                ScrollView(.horizontal, showsIndicators: false, content: {
-                    HStack{
-                        ForEach(0..<5){ product  in
-                            NavigationLink(destination: ProductDetailsView() ){
-                                ProductCell()
+                VStack(alignment: .leading) {
+                    Text("Category")
+                        .foregroundColor(Color.midnightBlue71)
+                        .font(.system(size: 20.0))
+                        .padding(.leading,20)
+                        .padding(.trailing)
+                    ForEach(0..<CategoryCell.row) { categoryRow in
+                        HStack{
+                            ForEach(0..<CategoryCell.column) { category in
+                                CategoryCell(category: self.homeVM.categories[category+categoryRow+categoryRow])
+                                
                             }
-                        }}
-                }).padding(.leading,20)
-                
-                
-            }.padding(.top, 20)
+                        }.padding(.leading,20)
+                    }
+                    
+                    
+                    
+                    HStack{
+                        Spacer()
+                        Text("see all categories").foregroundColor(.dusk)
+                            .font(.system(size: 12.0))
+                            .padding(.top,6)
+                            .padding(.trailing,20)
+                            .padding(.leading)
+                        
+                    }
+                    
+                    Text("Best Products")
+                        .foregroundColor(.dusk)
+                        .font(.system(size: 20.0))
+                        .padding(.leading,20)
+                        .padding(.top,20)
+                        .padding(.trailing)
+                    
+                    ScrollView(.horizontal, showsIndicators: false, content: {
+                        HStack{
+                            ForEach(0..<5){ product  in
+                                NavigationLink(destination: ProductDetailsView() ){
+                                    ProductCell()
+                                }
+                            }}
+                    }).padding(.leading,20)
+                    
+                    
+                }.padding(.top, 20)
+            })
         }
         .edgesIgnoringSafeArea(.top)
-            
+        
+        
+        
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            ContentView()
             ContentView()
         }
     }

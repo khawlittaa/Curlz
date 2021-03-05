@@ -18,7 +18,9 @@ struct ProductCell: View {
                 .opacity(0.7)
                 .shadow(color: .gray, radius: 1, x: 1, y: 1)
                 
-                .overlay(   ZStack(){ VStack{
+                .overlay(   ZStack()
+                
+                { VStack{
                     Image("natureBoxShampoo")
                         .resizable()
                         .renderingMode(.original)
